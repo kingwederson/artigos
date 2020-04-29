@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wederson de Paula">
+    <title>Estratégia para carteira de papel de Bitcoin</title>
+    <style>
+        body{
+            font-family:sans-serif;
+            max-width:500px;
+            text-align:justify;
+            text-indent: 20px;
+            margin:auto;
+            background-color: skyblue;
+        }
+        table{
+            border:solid 1px;
+            margin-bottom: 10px;
+            margin:auto;
+            font-family:'Courier New', Courier, monospace;
+            text-indent: 0px;
+        }
+        table.tabdado td, table.tabdado th{
+            text-align: center;
+        }
+        tr,th,td{
+            border:dotted 1px;
+        }
+        .private{
+            background-color: #eee;
+            color:red;
+        }
+        .hide{
+            display:none;
+        }
+        .telegrama{
+            letter-spacing: -2pt;
+            line-height: 30px;
+            font-size:38pt;
+        }
+        .grande{
+            font-size:20pt;
+        }
+        svg.dado{
+            width:18px;
+            height:18px;
+            border:1px solid black;
+            background-color:white;
+        }
+        svg.vermelho{
+            background-color:red;
+        }
+        svg.vermelho circle{
+            fill:white;
+        }
+        code{
+            background-color: yellow;
+            font-size:12pt;
+        }
+        tr.celverm td{
+            background-color: red;
+            color:white;
+        }
+        input[type="button"]{
+            background-color: darkgreen;
+            color:white;
+            padding:8px;
+            border-radius:9px;
+        }
+        p.credenciais{
+            text-align: right;
+            font-family:serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estratégia para carteira de papel de Bitcoin</h1>
+    <p class="credenciais">
+        <a href="https://twitter.com/kingwederson" target="_blank"><span name="author">Wederson de Paula</span></a>,
+    <span name="date">29 de abril de 2020</span>.
+    </p>
+    <p>Segurança é algo imprescindível quando se trata de dinheiro. Com o Bitcoin não é diferente. Pensando nisso <span>eu</span> resolvi elaborar uma estratégia de produção de uma carteira de Bitcoin que viesse a reunir as vantagens da <i>brain wallet</i> e da <i>paper wallet</i>.
+    </p><p>Claro que este modelo também importa as desvantagens de uma carteira de papel qualquer, visto que é necessário fazer <i>backups</i> e armazená-los em locais seguros. Os grandes riscos de uma carteira de papel são a sua perda e, em casos piores, o roubo deste pedaço de papel.</p>
+    <p></p>
+<h2>A estratégia</h2>
+<p>Tendo em vista os riscos e as vantagens do modo "carteira de papel", elaborei a seguinte estratégia. A "carteira de memória" que gerará os pares de chaves público e privados serão compostos de 3 partes. A primeira parte é um nome que você dará a si mesmo, e recomendo que não mude este, pois é único para você, e os teus fundos só seriam acessados caso algum atacante tivesse você como alvo e tivesse uma sorte astronômica. A segunda parte constitui a "chave global", parte em comum a todos os endereços desta carteira e gerada aleatóriamente. A terceira parte é o índice daquele grupo de carteiras que será gerado. Feito desta forma são alcançadas 1.75&times;10<sup>48</sup> combinações de grupos de carteira para cada "usuário", este número é 1750 quatrilhões de quatrilhões de quatrilhões.</p>
+<p>O número de combinações foi obtido elevando o número de caracteres possíveis sugeridos pelo modelo (36) pelo número de caracteres (31). A saber 36<sup>31</sup> é igual a 1.75&times;10<sup>48</sup>.</p>
+<p>O nome de usuário pode não ser escrito por você no documento que será exido no botão abaixo, não escrevê-lo garante mais segurança, mas exigirá que você tenha sempre na memória.</p>
+<a href="privada.html" target="_blank"><input type="button" value="Acessar documento de impressão"></a>
+<p>Após a impressão do documento você, dono do grupo de carteiras irá jogar um par de dados por 31 vezes. Caso não tenha dois dados poderá jogar cada um duas vezes repetindo este procedimento 31 vezes. Cada par de dados corresponderá a um caractere conforme apresentado na tabela a seguir.</p>
+<table id="sorteio" class="tabdado">
+    <tr>
+        <th></th>
+        <th colspan="7">Primeiro dado</th>
+    </tr>
+    <tr>
+        <th rowspan="7" style="-webkit-transform: rotate(-90.0deg);border:none;width:5px;">Segundo dado</th>
+        <th>
+            valor
+        </th>
+        <th>
+            <svg class="dado vermelho">
+                <circle r="2" cx="9" cy="9"></circle>
+            </svg>
+        </th>
+        <th>
+            <svg class="dado vermelho">
+                <circle r="2" cx="3" cy="3"></circle>
+                <circle r="2" cx="15" cy="15"></circle>
+            </svg>
+        </th>
+        <th>
+            <svg class="dado vermelho">
+                <circle r="2" cx="3" cy="3">
+                </circle><circle r="2" cx="9" cy="9"></circle>
+                <circle r="2" cx="15" cy="15"></circle>
+            </svg>
+        </th>
+        <th>
+            <svg class="dado vermelho">
+                <circle r="2" cx="3" cy="3"></circle>
+                <circle r="2" cx="3" cy="15"></circle>
+                <circle r="2" cx="15" cy="3"></circle>
+                <circle r="2" cx="15" cy="15"></circle>
+            </svg>
+        </th>
+        <th>
+            <svg class="dado vermelho">
+                <circle r="2" cx="3" cy="3"></circle>
+                <circle r="2" cx="3" cy="15"></circle>
+                <circle r="2" cx="9" cy="9"></circle>
+                <circle r="2" cx="15" cy="3"></circle>
+                <circle r="2" cx="15" cy="15"></circle>
+            </svg>
+        </th>
+        <th>
+            <svg class="dado vermelho">
+                <circle r="2" cx="3" cy="3"></circle>
+                <circle r="2" cx="3" cy="9"></circle>
+                <circle r="2" cx="3" cy="15"></circle>
+                <circle r="2" cx="15" cy="3"></circle>
+                <circle r="2" cx="15" cy="9"></circle>
+                <circle r="2" cx="15" cy="15"></circle>
+            </svg>
+        </th>
+    </tr>
+    <tr>
+        <th><svg class="dado">
+            <circle r="2" cx="9" cy="9"></circle>
+        </svg></th>
+        <td>q</td>
+        <td>w</td>
+        <td>e</td>
+        <td>r</td>
+        <td>t</td>
+        <td>y</td>
+    </tr>
+    <tr>
+        <th><svg class="dado">
+            <circle r="2" cx="3" cy="3"></circle>
+            <circle r="2" cx="15" cy="15"></circle>
+        </svg></th>
+        <td>u</td>
+        <td>i</td>
+        <td>o</td>
+        <td>p</td>
+        <td>a</td>
+        <td>s</td>
+    </tr>
+    <tr>
+        <th><svg class="dado">
+            <circle r="2" cx="3" cy="3"></circle>
+            <circle r="2" cx="9" cy="9"></circle>
+            <circle r="2" cx="15" cy="15"></circle>
+        </svg></th>
+        <td>d</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+        <td>j</td>
+        <td>k</td>
+    </tr>
+    <tr>
+        <th><svg class="dado">
+            <circle r="2" cx="3" cy="3"></circle>
+            <circle r="2" cx="3" cy="15"></circle>
+            <circle r="2" cx="15" cy="3"></circle>
+            <circle r="2" cx="15" cy="15"></circle>
+        </svg></th>
+        <td>l</td>
+        <td>z</td>
+        <td>x</td>
+        <td>c</td>
+        <td>v</td>
+        <td>b</td>
+    </tr>
+    <tr>
+        <th><svg class="dado">
+            <circle r="2" cx="3" cy="3"></circle>
+            <circle r="2" cx="3" cy="15"></circle>
+            <circle r="2" cx="9" cy="9"></circle>
+            <circle r="2" cx="15" cy="3"></circle>
+            <circle r="2" cx="15" cy="15"></circle>
+        </svg></th>
+        <td>n</td>
+        <td>m</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th><svg class="dado">
+            <circle r="2" cx="3" cy="3"></circle>
+            <circle r="2" cx="3" cy="9"></circle>
+            <circle r="2" cx="3" cy="15"></circle>
+            <circle r="2" cx="15" cy="3"></circle>
+            <circle r="2" cx="15" cy="9"></circle>
+            <circle r="2" cx="15" cy="15"></circle>
+        </svg></th>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+<p>A feliz coincidência de o número de algarismos somados ao número de letras do alfabeto latino padrão resultam em 36 diferentes caracteres que podem ser aludidos às combinações possíveis de dois dados.</p>
+<p>Feito isto você já terá a chave para geração do teu grupo de carteiras. E agora você irá gerar as carteiras. O recomendado é que você faça uso de cálculo automático para transformar esses caracteres em uma chave privada de base 58, que é o sistema numérico de chaves do Bitcoin. Para tal você poderá utlizar o <a target="_blank" href="http://www.bitaddress.org">bitaddress.org</a> tomando as precausões de desconectar-se da internet e desligar seu computador após o processo.</p>
+<p>Você usará a opção de geração <i>brain wallet</i> independente do programa ou página que esteja usando. E na opção <i>passphrase</i>, frase-senha ou qalquer termo equivalente você digitará <code>nome de unsuário</code>@<code>chave global</code>@<code>índice</code>.</p>
+<p>Feito isto você copiará os endereços públicos gerados com cada índice. Estes endereços podem ser guardados no próprio dispositivo indicando qual índice foi usado, conforme será apresentado no exemplo a seguir. Nada te impede que qe não faça uso de índices númericos, entretanto isso impedirá que herdeiros teus possam ter acesso ou fazer com que você esqueça, visto que isso servirá como um rótulo ou uma etiqueta de carteira propriamente dito.</p>
+<h3>Exemplo</h3>
+<p>Suponhamos que você adote como nome de usuário secretamente <code>danielfraga</code>, logo você imprime <a href="privada.html" target="_blank"><span>aquele documento</span></a>, e se quiser escreve um nome para a carteira, isto é, uma etiqueta. Você escreverá seu nome de usuário <code>danielfraga</code> e sorteará via dados. Suponhamos que o resutado do sorteio tenha sido (3,1)(6,3)(6,2)(1,4)(3,3)(5,6)(2,6)(4,3)(4,1)(5,1)(6,6)(2,5)(6,5)(5,5)(5,6)(4,5)(4,5)(3,3)(6,2)(4,2)(1,5)(5,2)(6,5)(4,2)(5,2)(6,4)(2,6)(3,6)(4,3)(1,1)(2,4). Observando a tabela dos dados podemos ver que os caracteres correspondentes são <code>ekslg85hrt9m32811gspna3pab56hqz</code>.</p>
+<p>O preenchimento da "cédula" de acesso aos pares de chaves são os observados abaixo:</p>
+
+    <table>
+        <tr>
+            <th>carteira</th>
+            <td>alabama</td>
+        </tr>
+        <tr>
+            <th>usário</th>
+            <td>danielfraga</td>
+        </tr>
+        <tr>
+            <th>global</th>
+            <td class="grande">
+                @ekslg85<br>
+                hrt9m328<br>
+                11gspna3<br>
+                pab56hqz<br>
+            </td>
+        </tr>
+    </table>
+
+<p>Veja a <i>brain wallet</i> que gerará cada par de endereços, segundo o índice começando em vazio (sem @numero) e terminando em 15:</p>
+<ul>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code> (pode ser usada como carteira principal desse grupo de carteiras)</li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>1</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>2</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>3</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>4</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>5</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>6</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>7</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>8</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>9</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>10</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>11</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>12</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>13</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>14</code></li>
+<li><code>danielfraga</code>@<code>ekslg85hrt9m32811gspna3pab56hqz</code>@<code>15</code></li>
+</ul>
+    <p>Estes dados poderiam ser guardados em um dispositivo conectado à internet sem risco, pois contém apenas as chaves públicas, isto é, o endereço da(s) carteira(s) Bitcoin. Veja:</p>
+    <table>
+        <tr>
+            <th>carteira</th>
+            <td><a title="Etiqueta qualquer para identificar a carteira, não influencia o resultado.">alabama</a></td>
+        </tr>
+        <tr>
+            <th>usário</th>
+            <td>danielfraga</td>
+        </tr>
+        <tr>
+            <th>índice</th>
+            <th>endereço</th>
+        </tr>
+        <tr>
+            <td>(vazio)</td>
+            <td>166nj1VwuZAYgyFbN4Do87LYaXxTSuFzJr</td>
+        </tr>
+        <tr>
+            <td>@1</td>
+            <td>15cR6NAGagTb7R71cyYAAQfjatSTbS6h91</td>
+        </tr>
+        <tr>
+            <td>@2</td>
+            <td>1M2Xp4PynJ9p9UCUVCvd7j3P68WmPggyHw</td>
+        </tr>
+        <tr>
+            <td>@3</td>
+            <td>1GjemmHfLGyrtDYcdwpL2NoXXd2JACkYoi</td>
+        </tr>
+        <tr>
+            <td>@4</td>
+            <td>1HJqy1kQdSmBKsX3jiYrgL6RSr8HwUiAJc</td>
+        </tr>
+        <tr>
+            <td>@5</td>
+            <td>13EVRUcYTfbke6U1MhZ9kqXDLyztFEADZr</td>
+        </tr>
+        <tr>
+            <td>@6</td>
+            <td>1KCRC4ku1hK46K1YYGaKWnJvheSYhPLQBm</td>
+        </tr>
+        <tr>
+            <td>@7</td>
+            <td>1MsPxrAsTwraQ9JTWpKf8G43WrgQJfuCwK</td>
+        </tr>
+        <tr>
+            <td>@8</td>
+            <td>1EBJ6eQyVB7ZAZy8ZbBE5D4sXVfB96hbZr</td>
+        </tr>
+        <tr>
+            <td>@9</td>
+            <td>1L9tv4JBsJbEmn4JQqnpX4WXVPtHFiDeBX</td>
+        </tr>
+        <tr>
+            <td>@10</td>
+            <td>17EEWNYjGn6iLWzJY3hFwuNTAF4UckTG8M</td>
+        </tr>
+        <tr>
+            <td>@11</td>
+            <td>1BxAcxTUQ888NXCA4rfmw1yatbm3WpZZgB</td>
+        </tr>
+        <tr>
+            <td>@12</td>
+            <td>1L2uxAQvWwy1wS2N162thMPJzNYw8axhD8</td>
+        </tr>
+        <tr>
+            <td>@13</td>
+            <td>1PfZAQx9MKLtkbyzLyzH9GG5HUZtU4YUuH</td>
+        </tr>
+        <tr>
+            <td>@14</td>
+            <td>1PCJ4SE2Svb4kHwujfDRKyWJcoJeUeBatJ</td>
+        </tr>
+        <tr>
+            <td>@15</td>
+            <td>12XZddpCJUJ4LjAi2uXipdUpodSbQtScyE</td>
+        </tr>
+    </table>
+<h3>Outras quantidades de caracteres</h3>
+<table>
+    <tr>
+        <th>Número de<br>caracteres<br>usados</th>
+        <th>Combinações<br>possíveis</th>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>1.75&times;10<sup>48</sup></td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>4.88&times;10<sup>46</sup></td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>1.35&times;10<sup>45</sup></td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>3.77&times;10<sup>43</sup></td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>1.04&times;10<sup>42</sup></td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>2.91&times;10<sup>40</sup></td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>8.08&times;10<sup>38</sup></td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>2.24&times;10<sup>37</sup></td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>6.23&times;10<sup>35</sup></td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>1.73&times;10<sup>34</sup></td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>4.81&times;10<sup>32</sup></td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>1.33&times;10<sup>31</sup></td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>3.71&times;10<sup>29</sup></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>1.03&times;10<sup>28</sup></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>2.86&times;10<sup>26</sup></td>
+    </tr>
+    <tr class="celverm">
+        <td>16</td>
+        <td>7.95&times;10<sup>24</sup></td>
+    </tr>
+    <tr class="celverm">
+        <td>15</td>
+        <td>2.21&times;10<sup>23</sup></td>
+    </tr>
+</table>
+</body>
+</html>
