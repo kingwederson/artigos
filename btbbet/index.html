@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostas do Brasileirão</title>
+    <style>
+        body{
+            color:white;
+            background-color: black;
+            font-family:'Arial';
+            text-align: center;
+        }
+        img.pequena{max-height:30px;}
+        img.joaovitor{content:url("https://scontent-gru2-1.xx.fbcdn.net/v/t1.0-1/p100x100/79797218_454758561907388_3567888994177908736_o.jpg?_nc_cat=105&_nc_sid=dbb9e7&_nc_ohc=zv3O457hj2EAX_59Yay&_nc_ht=scontent-gru2-1.xx&_nc_tp=6&oh=6f9ed0366e15074abcaf3ae81933829e&oe=5F66BF20");}
+        img.mateus{content:url("https://scontent-gru2-1.xx.fbcdn.net/v/t1.0-1/p100x100/80770228_2954410867950649_916042002259247104_o.jpg?_nc_cat=105&_nc_sid=dbb9e7&_nc_ohc=gyp19Q4WEHYAX8yKORO&_nc_ht=scontent-gru2-1.xx&_nc_tp=6&oh=861aa753e487eec55f7eb6564742ca6e&oe=5F63C022");}
+        img.romario{content:url("https://www.facebook.com/search/async/profile_picture/?fbid=100006368612505&width=72&height=72");}
+        img.wallace{content:url("https://www.facebook.com/search/async/profile_picture/?fbid=100000083788821&width=72&height=72");}
+        img.wederson{content:url("https://www.facebook.com/search/async/profile_picture/?fbid=100005281680258&width=72&height=72");}
+
+        img.ACG{content:url("https://upload.wikimedia.org/wikipedia/pt/c/cc/Atl%C3%A9tico_Clube_Goianiense_escudo_2020.png")}
+        img.BAH{content:url("https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png")}
+        img.BOT{content:url("https://logodetimes.com/times/botafogo/logo-botafogo-256.png")}
+        img.CAM{content:url("https://logodetimes.com/times/atletico-mineiro/logo-atletico-mineiro-256.png")}
+        img.CAP{content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/CA_Paranaense.svg/240px-CA_Paranaense.svg.png")}
+        img.CEA{content:url("https://logodetimes.com/times/ceara/logo-ceara-256.png")}
+        img.CHA{content:url("https://upload.wikimedia.org/wikipedia/commons/6/61/S%C3%ADmbolo_Chapecoense_sem_estrelas.svg")}
+        img.COR{content:url("https://s.glbimg.com/es/sde/f/equipes/2018/03/10/corinthians.svg")}
+        img.CTB{content:url("https://upload.wikimedia.org/wikipedia/commons/3/38/Coritiba_FBC_%282011%29_-_PR.svg")}
+        img.FLA{content:url("https://upload.wikimedia.org/wikipedia/commons/2/2e/Flamengo_braz_logo.svg");max-height:25px}
+        img.FLU{content:url("https://upload.wikimedia.org/wikipedia/de/1/12/Fluminense_Football_Club.svg")}
+        img.FOR{content:url("https://upload.wikimedia.org/wikipedia/commons/3/3d/Fortaleza_Esporte_Clube_logo.svg")}
+        img.GOI{content:url("https://upload.wikimedia.org/wikipedia/commons/7/71/Goias_Esporte_Clube_inverted_logo.svg")}
+        img.GRE{content:url("https://upload.wikimedia.org/wikipedia/en/f/f1/Gremio.svg")}
+        img.INT{content:url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Escudo_do_Sport_Club_Internacional.svg")}
+        img.PAL{content:url("https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg")}
+        img.RBB{content:url("https://upload.wikimedia.org/wikipedia/pt/9/94/Red_Bull_Brasil.png")}
+        img.SAN{content:url("https://upload.wikimedia.org/wikipedia/commons/3/35/Santos_logo.svg")}
+        img.SPFC{content:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg")}
+        img.SPO{content:url("https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png")}
+        img.VAS{content:url("https://upload.wikimedia.org/wikipedia/en/1/1a/ClubDeRegatasVascoDaGama.svg")}
+        table,td,th{
+            border:black 1px solid;
+            border-radius:5px;
+            text-align: center;
+            background-color: rgb(66, 57, 43);
+            color:white;
+            margin:auto;
+        }
+        td{width:50px;}
+        tr:nth-child(2) td,tr:nth-child(3) td,tr:nth-child(4) td,tr:nth-child(5) td,tr:nth-child(6) td,tr:nth-child(7) td{
+            background-color: cornflowerblue;
+        }
+        tr:nth-child(8) td,tr:nth-child(9) td,tr:nth-child(10) td,tr:nth-child(11) td,tr:nth-child(12) td,tr:nth-child(13) td,
+        tr:nth-child(14) td,tr:nth-child(15) td,tr:nth-child(16) td,tr:nth-child(17) td{
+            background-color: rgb(87, 207, 87);
+        }
+        tr:nth-child(18) td,tr:nth-child(19) td,tr:nth-child(20) td,tr:nth-child(21) td{
+            background-color: rgb(207, 87, 87);
+        }
+    </style>
+</head>
+<body>
+    <h1>Apostas para o Brasileirão 2020</h1>
+    <p>A equipe do antigo blog Box To Box apostam em como a tabela de classificação do Campeonato Brasileiro Série A de 2020 terminará.</p>
+    <table>
+        <tbody>
+            <tr>
+                <th>&sharp;</th>
+                <th><img class="pequena joaovitor"></th>
+                <th><img class="pequena mateus"></th>
+                <th><img class="pequena romario"></th>
+                <th><img class="pequena wallace"></th>
+                <th><img class="pequena wederson"></th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena FLA"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena BOT"></td>
+                <td><img class="pequena CAM"></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena GRE"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CAM"></td>
+                <td><img class="pequena GRE"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CAM"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena INT"></td>
+                <td><img class="pequena FLA"></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena PAL"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena GRE"></td>
+                <td><img class="pequena PAL"></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena SAN"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena FLA"></td>
+                <td><img class="pequena INT"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena INT"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena PAL"></td>
+                <td><img class="pequena VAS"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena COR"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CAP"></td>
+                <td><img class="pequena CAP"></td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena VAS"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena COR"></td>
+                <td><img class="pequena COR"></td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CAP"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena SAN"></td>
+                <td><img class="pequena FLU"></td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena BAH"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena VAS"></td>
+                <td><img class="pequena BAH"></td>
+            </tr>
+            <tr>
+                <th>11</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena SPFC"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena BAH"></td>
+                <td><img class="pequena SPFC"></td>
+            </tr>
+            <tr>
+                <th>12</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena BOT"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena RBB"></td>
+                <td><img class="pequena RBB"></td>
+            </tr>
+            <tr>
+                <th>13</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena RBB"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena FLU"></td>
+                <td><img class="pequena SAN"></td>
+            </tr>
+            <tr>
+                <th>14</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena FOR"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena SPFC"></td>
+                <td><img class="pequena BOT"></td>
+            </tr>
+            <tr>
+                <th>15</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena FLU"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena FOR"></td>
+                <td><img class="pequena FOR"></td>
+            </tr>
+            <tr>
+                <th>16</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena ACG"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CEA"></td>
+                <td><img class="pequena ACG"></td>
+            </tr>
+            <tr>
+                <th>17</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena GOI"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena SPO"></td>
+                <td><img class="pequena GOI"></td>
+            </tr>
+            <tr>
+                <th>18</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CEA"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena ACG"></td>
+                <td><img class="pequena SPO"></td>
+            </tr>
+            <tr>
+                <th>19</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena SPO"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena GOI"></td>
+                <td><img class="pequena CEA"></td>
+            </tr>
+            <tr>
+                <th>20</th>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CTB"></td>
+                <td><img class="pequena "></td>
+                <td><img class="pequena CTB"></td>
+                <td><img class="pequena CTB"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
